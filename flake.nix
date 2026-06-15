@@ -1,9 +1,8 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-26.05";
-    hyprland = {
-      url = "github:hyprwm/Hyprland?ref=v0.55.4";
-    };
+    hyprnix.url = "github:hyprwm/hyprnix";
+    hyprland.follows = "hyprnix/hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins?ref=v0.55.0";
       inputs.hyprland.follows = "hyprland"; # Prevents version mismatch.
