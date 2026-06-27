@@ -1,7 +1,10 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-26.05";
-    hyprnix.url = "github:hyprwm/hyprnix";
+    hyprnix = {
+      url = "github:hyprwm/hyprnix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprland.follows = "hyprnix/hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins?ref=v0.55.0";
@@ -19,7 +22,10 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    win2k-plymouth.url = "github:Win2K-for-Unix/Win2K-Plymouth";
+    win2k-plymouth = {
+      url = "github:Win2K-for-Unix/Win2K-Plymouth";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: let
