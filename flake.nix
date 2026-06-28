@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-26.05";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/*";
     hyprnix = {
       url = "github:hyprwm/hyprnix";
       inputs.nixpkgs.follows = "nixpkgs";
