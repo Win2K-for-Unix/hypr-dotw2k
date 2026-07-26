@@ -1,0 +1,185 @@
+/* Windows 2000 taskbar — periwinkle blue gradient, sharp corners, beveled buttons. */
+@define-color taskbar-top #3168d5;
+@define-color taskbar-bot #245edb;
+@define-color taskbar-edge-top #aabbdd;
+@define-color taskbar-edge-bot #1a3c7e;
+@define-color text-on-blue #ffffff;
+@define-color silver #d4d0c8;
+@define-color silver-edge #3c3b3b;
+@define-color focus-blue #0a246a;
+
+* {
+  font-family: "Tahoma", "Liberation Sans", sans-serif;
+  font-size: 11px;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+window#waybar {
+  background: linear-gradient(to bottom, @taskbar-top, @taskbar-bot);
+  color: @text-on-blue;
+  border-top: 1px solid @taskbar-edge-top;
+  border-bottom: 1px solid @taskbar-edge-bot;
+  border-radius: 0;
+}
+
+/* All modules sit on the taskbar with no margin between them — they are
+   beveled "buttons" rather than rounded pills. */
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 0 2px;
+}
+
+.modules-left label.module,
+.modules-center label.module,
+.modules-right label.module {
+  padding: 0 8px;
+}
+
+/* Workspace buttons — W2K bevel. Raised when idle, sunken when active. */
+#workspaces button {
+  color: @text-on-blue;
+  padding: 0 10px;
+  border: 1px solid @taskbar-edge-bot;
+  box-shadow: inset 1px 1px 0 @taskbar-edge-top, inset -1px -1px 0 @taskbar-edge-bot;
+  background: @taskbar-bot;
+  min-width: 24px;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  box-shadow: inset 1px 1px 0 @taskbar-edge-bot, inset -1px -1px 0 @taskbar-edge-top;
+  background: #1a4eb2;
+}
+
+#workspaces button.urgent {
+  background: #c00000;
+  color: @text-on-blue;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+/* Generic module bevel — silver raised button. */
+#clock,
+#tray,
+#pulseaudio,
+#network,
+#network#vpn,
+#bluetooth,
+#backlight,
+#battery,
+#mpris,
+#privacy,
+#custom-logout,
+#custom-swaync {
+  color: #000000;
+  background: @silver;
+  border: 1px solid @silver-edge;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #808080;
+  padding: 0 8px;
+}
+
+#clock {
+  font-weight: bold;
+}
+
+/* Tray icons lose their rounded backgrounds. */
+#tray {
+  padding: 0 4px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .active {
+  -gtk-icon-effect: highlight;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  animation: blink 0.7s steps(2) infinite;
+}
+
+@keyframes blink {
+  50% {
+    background: #c00000;
+    color: @text-on-blue;
+  }
+}
+
+#mode {
+  padding: 0 8px;
+  background: @taskbar-edge-bot;
+  color: @text-on-blue;
+}
+
+#idle_inhibitor {
+  padding: 0 8px;
+  color: @text-on-blue;
+  background: transparent;
+}
+
+#idle_inhibitor.activated {
+  color: #ffe080;
+}
+
+/* Subtle separators between sections — like W2K toolbar dividers. */
+#custom-right-spacer-workspaces,
+#custom-right-spacer-tray,
+#custom-left-spacer-organisation,
+#custom-right-spacer-organisation,
+#custom-left-spacer-audio {
+  font-size: 11px;
+  color: transparent;
+  background: transparent;
+  padding: 0 4px;
+  border-left: 1px solid @taskbar-edge-top;
+  border-right: 1px solid @taskbar-edge-bot;
+}
+
+/* Tooltips match the chrome — silver with a beveled border. */
+tooltip {
+  background-color: @silver;
+  border: 1px solid @silver-edge;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #808080;
+  color: #000000;
+}
+
+tooltip label {
+  color: #000000;
+}
+
+/* Privacy / mic / screenshare indicators. */
+#privacy {
+  padding: 0;
+}
+
+#privacy-item.screenshare,
+#privacy-item.audio-in {
+  padding: 0 4px;
+}
+
+/* Battery critical — W2K red. */
+#battery.critical:not(.charging) {
+  color: #c00000;
+}
+
+#battery.charging {
+  color: #008000;
+}
+
+/* The shutdown "Start" button. */
+#custom-logout {
+  font-weight: bold;
+}
+
+#custom-swaync {
+}
