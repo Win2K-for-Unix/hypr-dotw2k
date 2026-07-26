@@ -707,7 +707,9 @@
         "hyprutils": "hyprutils",
         "hyprwayland-scanner": "hyprwayland-scanner_3",
         "hyprwire": "hyprwire",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "systems": "systems",
         "xdph": "xdph"
       },
@@ -1149,50 +1151,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1781074563,
-        "narHash": "sha256-md8WlXOlfnIeHeOScMTTHFyf2d6iaTwPl2apR5EQ3P4=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "9ae611a455b90cf061d8f332b977e387bda8e1ca",
-        "type": "github"
+        "lastModified": 1784856561,
+        "narHash": "sha256-J+Bx1Z6Oeoj2FgnBhRMKyUhhtDoOpTgXYaVLZpDjW4A=",
+        "rev": "597283ad8aa0b331c788e97c4c262d58877074ef",
+        "revCount": 1010275,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.2605.1010275%2Brev-597283ad8aa0b331c788e97c4c262d58877074ef/019f9a67-5b95-7fd0-afb3-7a7416577852/source.tar.gz"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1780453794,
-        "narHash": "sha256-bXMRa9VTsHSPXL4Cw8R6JJLQeY3Y/IP4+YJCYVmQ7FY=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "6b316287bae2ee04c9b93c8c858d930fd07d7338",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-26.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1759381078,
-        "narHash": "sha256-gTrEEp5gEspIcCOx9PD8kMaF1iEmfBcTbO0Jag2QhQs=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "7df7ff7d8e00218376575f0acdcc5d66741351ee",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "type": "tarball",
+        "url": "https://flakehub.com/f/NixOS/nixpkgs/%2A"
       }
     },
     "pre-commit-hooks": {
@@ -1248,9 +1216,11 @@
         ],
         "hyprland-plugins": "hyprland-plugins",
         "hyprnix": "hyprnix",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "quickshell": "quickshell",
         "snappy-switcher": "snappy-switcher",
+        "win2k-gtk": "win2k-gtk",
+        "win2k-icons": "win2k-icons",
         "win2k-plymouth": "win2k-plymouth"
       }
     },
@@ -1305,10 +1275,44 @@
         "type": "github"
       }
     },
+    "win2k-gtk": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1785098624,
+        "narHash": "sha256-wBSw19pi7L1IoLmrEtH/LdfT2MFHLnJE0mt6RvYb9AU=",
+        "owner": "Win2K-for-Unix",
+        "repo": "Win2K-GTK",
+        "rev": "0413adfcb6a3c1bf1d0ebef8006ae6b789a545ac",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Win2K-for-Unix",
+        "repo": "Win2K-GTK",
+        "type": "github"
+      }
+    },
+    "win2k-icons": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1591925324,
+        "narHash": "sha256-pXuKmy3D1jIbQoCOkRfAMwgV2tDz6CQXr5EPhiEx38Y=",
+        "owner": "matthewmx86",
+        "repo": "WinClassic_icons",
+        "rev": "101881aa18f0e20ffa6ea5510360a3bff353b8a1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "matthewmx86",
+        "repo": "WinClassic_icons",
+        "type": "github"
+      }
+    },
     "win2k-plymouth": {
       "inputs": {
         "flake-compat": "flake-compat_2",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1765484299,

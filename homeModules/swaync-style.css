@@ -1,0 +1,122 @@
+/* Windows 2000 style — silver chrome, beveled edges, sharp corners. */
+
+* {
+  font-family: "Tahoma", "Liberation Sans", sans-serif;
+  font-size: 11px;
+  border-radius: 0;
+}
+
+.control-center {
+  background-color: #d4d0c8;
+  border: 2px solid #3c3b3b;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #808080;
+  color: #000000;
+}
+
+.control-center > .notification-row,
+.control-center > .placeholder-row {
+  background-color: #d4d0c8;
+  border: 1px solid #ffffff;
+  box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #ffffff;
+}
+
+.notification {
+  background-color: #d4d0c8;
+  border: 2px solid #3c3b3b;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #808080;
+  color: #000000;
+  border-radius: 0;
+}
+
+.notification-content {
+  background: transparent;
+  padding: 8px;
+}
+
+.notification-action {
+  background: #d4d0c8;
+  border: 1px solid #3c3b3b;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #808080;
+  color: #000000;
+  padding: 2px 8px;
+}
+
+.notification-action:hover {
+  background: #e4e0d8;
+}
+
+.notification-action:active {
+  box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #ffffff;
+  background: #c4c0b8;
+}
+
+/* Notification group (collapses multiple notifications). */
+.notification-group {
+  background-color: #d4d0c8;
+  border: 2px solid #3c3b3b;
+}
+
+.notification-group:focus,
+.notification-group:hover {
+  background-color: #e4e0d8;
+}
+
+.notification-group .notification-action,
+.notification-group .notification {
+  margin: 0;
+}
+
+/* The top-bar of the control center — W2K titlebar. */
+.titlebar {
+  background: linear-gradient(to bottom, #3168d5, #245edb);
+  border-top: 1px solid #aabbdd;
+  border-bottom: 1px solid #1a3c7e;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 2px 8px;
+}
+
+/* The bottom-bar (clear / DND buttons). */
+.bottom-bar {
+  background: #d4d0c8;
+  border-top: 1px solid #ffffff;
+  box-shadow: inset 0 1px 0 #808080;
+}
+
+.bottom-bar > button {
+  background: #d4d0c8;
+  border: 1px solid #3c3b3b;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #808080;
+  color: #000000;
+  padding: 2px 8px;
+}
+
+.bottom-bar > button:hover {
+  background: #e4e0d8;
+}
+
+/* Inhibit / DND toggles inside the bottom-bar. */
+.toggle {
+  background: #d4d0c8;
+  border: 1px solid #3c3b3b;
+}
+
+.toggle:checked {
+  background: #1a4eb2;
+  color: #ffffff;
+  box-shadow: inset 1px 1px 0 #1a3c7e, inset -1px -1px 0 #aabbdd;
+}
+
+/* Inline progress bars (e.g., volume / progress). */
+progressbar {
+  background-color: #ffffff;
+  border: 1px solid #3c3b3b;
+  box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #ffffff;
+  min-height: 8px;
+}
+
+progressbar > progress,
+progressbar > trough > progress {
+  background-color: #245edb;
+  border-radius: 0;
+}
