@@ -104,7 +104,7 @@ in {
   config = lib.mkIf cfg.enable {
     programs.rofi = {
       enable = lib.mkForce true;
-      package = lib.mkForce pkgs.rofi-wayland;
+      package = lib.mkForce pkgs.rofi;
       theme = lib.mkForce rofiTheme;
     };
   };
