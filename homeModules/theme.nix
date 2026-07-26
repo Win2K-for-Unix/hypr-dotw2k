@@ -211,6 +211,7 @@ in {
 
     home.pointerCursor = lib.mkForce {
       package = cursorTheme;
+      name = "win2k-cursor";
       size = 24;
     };
 
