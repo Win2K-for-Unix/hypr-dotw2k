@@ -1,12 +1,10 @@
-/*
- * Windows 2000 Hyprland decoration: flat, sharp-cornered windows with a
- * silver/classic-blue border, no blur, no rounding.
- *
- * Only `config.general` and `config.decoration` are forced (not the whole
- * `config` attrset) so that other Hyprland settings the importing config
- * sets — input, misc, binds, env, etc. — are left untouched. Forcing the
- * whole `config` value would silently wipe those out.
- */
+# Windows 2000 Hyprland decoration: flat, sharp-cornered windows with a
+# silver/classic-blue border, no blur, no rounding.
+#
+# Only `config.general` and `config.decoration` are forced (not the whole
+# `config` attrset) so that other Hyprland settings the importing config
+# sets — input, misc, binds, env, etc. — are left untouched. Forcing the
+# whole `config` value would silently wipe those out.
 {
   config,
   lib,

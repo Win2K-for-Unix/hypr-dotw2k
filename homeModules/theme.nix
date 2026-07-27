@@ -1,28 +1,26 @@
-/*
- * Windows 2000 (Luna) GTK/Qt/icon/cursor/font theme.
- *
- * Sources:
- *   - GTK theme : github:Win2K-for-Unix/Win2K-GTK (flake input `win2k-gtk`).
- *                 The upstream repo has been patched to use the W2K silver
- *                 (#d4d0c8) / classic blue (#0a246a) palette; this flake
- *                 tracks the latest commit on `main`.
- *   - Icons    : github:matthewmx86/WinClassic_icons (flake input
- *                `win2k-icons`) — installs the `Redmond97` directory.
- *   - Cursors  : "classic-1" cursor set (rw-designer.com/cursor-set/classic-1),
- *                public domain, ripped from user32.dll. Fetched as a ZIP and
- *                converted from .cur to Xcursor format via win2xcur. The
- *                identifiable cursors (arrow, text, wait, hand, resize, etc.)
- *                are aliased to their standard X11 names; the rest install
- *                under their original numbered names.
- *   - Font     : `pkgs.corefonts` (nixpkgs-packaged Microsoft core fonts,
- *                which includes Tahoma.ttf). Unfree — requires
- *                `nixpkgs.config.allowUnfreePredicate` (or `allowUnfree`)
- *                to be set for the Microsoft EULA package to build.
- *
- * Uses `home.sessionVariables` (not `environment.sessionVariables`) since
- * this module must work standalone under plain Home-Manager, not only
- * inside a NixOS + Home-Manager combined module system.
- */
+# Windows 2000 (Luna) GTK/Qt/icon/cursor/font theme.
+#
+# Sources:
+#   - GTK theme : github:Win2K-for-Unix/Win2K-GTK (flake input `win2k-gtk`).
+#                 The upstream repo has been patched to use the W2K silver
+#                 (#d4d0c8) / classic blue (#0a246a) palette; this flake
+#                 tracks the latest commit on `main`.
+#   - Icons    : github:matthewmx86/WinClassic_icons (flake input
+#                `win2k-icons`) — installs the `Redmond97` directory.
+#   - Cursors  : "classic-1" cursor set (rw-designer.com/cursor-set/classic-1),
+#                public domain, ripped from user32.dll. Fetched as a ZIP and
+#                converted from .cur to Xcursor format via win2xcur. The
+#                identifiable cursors (arrow, text, wait, hand, resize, etc.)
+#                are aliased to their standard X11 names; the rest install
+#                under their original numbered names.
+#   - Font     : `pkgs.corefonts` (nixpkgs-packaged Microsoft core fonts,
+#                which includes Tahoma.ttf). Unfree — requires
+#                `nixpkgs.config.allowUnfreePredicate` (or `allowUnfree`)
+#                to be set for the Microsoft EULA package to build.
+#
+# Uses `home.sessionVariables` (not `environment.sessionVariables`) since
+# this module must work standalone under plain Home-Manager, not only
+# inside a NixOS + Home-Manager combined module system.
 {
   config,
   pkgs,
