@@ -1,7 +1,5 @@
-/*
- * Windows 2000 style for swaync notifications — silver chrome, beveled
- * edges, sharp corners, blue titlebar strip.
- */
+# Windows 2000 style for swaync notifications — silver chrome, beveled
+# edges, sharp corners, blue titlebar strip.
 {
   config,
   lib,

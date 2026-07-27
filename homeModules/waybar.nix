@@ -1,7 +1,5 @@
-/*
- * Windows 2000 taskbar for waybar — bottom-positioned, periwinkle blue
- * gradient, beveled buttons, no rounding, no transparency.
- */
+# Windows 2000 taskbar for waybar — bottom-positioned, periwinkle blue
+# gradient, beveled buttons, no rounding, no transparency.
 {
   config,
   lib,

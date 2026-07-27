@@ -1,10 +1,8 @@
-/*
- * Rofi launcher styled like the Windows 2000 "Run..." dialog.
- *
- * This module does not bind a key to launch rofi — hypr-dotw2k is generic
- * and can't assume the importing config's Hyprland keybind syntax. Add
- * your own bind, e.g. `bind = SUPER, R, exec, rofi -show drun`.
- */
+# Rofi launcher styled like the Windows 2000 "Run..." dialog.
+#
+# This module does not bind a key to launch rofi — hypr-dotw2k is generic
+# and can't assume the importing config's Hyprland keybind syntax. Add
+# your own bind, e.g. `bind = SUPER, R, exec, rofi -show drun`.
 {
   config,
   pkgs,
