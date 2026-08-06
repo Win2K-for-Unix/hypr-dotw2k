@@ -11,7 +11,7 @@
       inputs.hyprland.follows = "hyprland"; # Prevents version mismatch.
     };
     snappy-switcher = {
-      url = "github:OpalAayan/snappy-switcher";
+      url = "github:OpalAayan/snappy-switcher?rev=0957cd612fadf80fa95034515cb6fa2c163e497e";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
